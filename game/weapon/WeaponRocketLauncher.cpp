@@ -101,6 +101,11 @@ void rvWeaponRocketLauncher::Spawn ( void ) {
 	spawnArgs.GetFloat ( "lockSlowdown", ".25", f );
 	attackDict.GetFloat ( "speed", "0", guideSpeedFast );
 	guideSpeedSlow = guideSpeedFast * f;
+	guideSpeedFast = 50.0f;
+	attackDict.Set("speed", "50");
+
+	
+
 	
 	reloadRate = SEC2MS ( spawnArgs.GetFloat ( "reloadRate", ".8" ) );
 	
